@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>404 - 页面走丢啦</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root {
+      --primary: #3273dc;
+      --info: #209cee;
+      --light: #f5f5f5;
+      --dark: #363636;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(50, 115, 220, 0.2), rgba(32, 156, 238, 0.2));
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color: var(--light);
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 8rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+      animation: float 3s ease-in-out infinite alternate;
+    }
+    .msg {
+      margin: .5rem 0 2rem;
+      font-size: 1.5rem;
+      opacity: .9;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+      padding: .75rem 2rem;
+      background: rgba(255, 255, 255, .2);
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 50px;
+      color: #fff;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: .3s;
+      font-size: 1.1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, .4);
+      transform: translateY(-2px);
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+    #egg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: transparent;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: width .4s, height .4s;
+    }
+    #egg.active {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 255, 255, .1);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="big404">404</h1>
+  <div class="msg" id="msg">页面已经飞走啦，但作品还在！</div>
+  <a class="btn" href="https://xuzx-ricky.github.io/" target="_blank">返回首页</a>
+
+  <!-- 彩蛋：点击数字随机换颜色 / 文案 -->
+  <div id="egg"></div>
+  <script>
+    const colors = [
+      'rgba(255, 107, 107, 0.2)',
+      'rgba(255, 236, 87, 0.2)',
+      'rgba(72, 202, 228, 0.2)',
+      'rgba(106, 5, 114, 0.2)',
+      'rgba(255, 154, 139, 0.2)',
+      'rgba(168, 230, 207, 0.2)'
+    ];
+  const tips = [
+    "404 不存在的页面，就像不存在的 BUG。",
+    "你找的东西走丢了，但它留下了彩蛋。",
+    "别灰心，404 也是通往首页的另一种方式。",
+    "页面已下线，但创意永不下线！",
+    "404：宇宙正在加载，请稍后再试。",
+    "雾霾太大，连页面都看不见了？！",
+    "从前有座山，山里有座庙，庙里有个页面，现在找不到…",
+    "玩脱了，页面离家出走了。",
+    "师傅，邮差被妖怪抓走了…快回首页救他！",
+    "昨天狗宝贝“球球”吵着要溜达，结果服务器淋雨生病了…",
+    "2012，您要访问的页面已上船！",
+    "抱歉，饭吃完了，页面也没了。",
+    "曾经有一份真正的页面放在我面前，我没有珍惜…",
+    "失联，好吧，一看就知道没希望了。",
+    "有料到喔！可惜页面没料到你会来。",
+    "404：页面正在跑酷，不小心摔出了边界。",
+    "你访问的像素点被黑洞吸走了，回家等刷新吧！",
+    "服务器打了个盹，页面趁机溜号了。",
+    "你踩中了隐藏彩蛋，可惜不是隐藏入口。",
+    "404：页面正在加载，但似乎什么也没有。",
+    "这里原本是页面，现在只剩下一行代码的叹息。",
+    "页面走丢前留下一句话：记得保存草稿。",
+    "404：页面去参加团建了，回来给你带礼物。",
+    "你访问的链接已下线。",
+    "404：页面去追蝴蝶了，一会儿飞回来。",
+    "这里原本是页面，现在只剩下一颗404星。",
+    "404：页面正在加载，但加载的是平行宇宙。"
+    "你访问的页面正躲起来练隐身术，稍后再来吧！",
+    "404：页面被外星人绑架了，我们已派出救援队。",
+    "页面走丢，但它留下了这张字条：回首页看看。",
+    "服务器打了个喷嚏，页面被吹走了。",
+    "404：页面休假中，归期未定。",
+    "页面被时间机器带走了，点击返回回到现在。",
+    "404：页面正在充电，请稍后再来体验满格快乐。",
+    "404：页面正在学习隐身术，学成归来通知你。",
+    "404：页面正在升级，请耐心等待新版本。",
+    "页面掉进了兔子洞，首页是出口。",
+    ];
+    const big = document.getElementById('big404');
+    const msg = document.getElementById('msg');
+    const egg = document.getElementById('egg');
+
+    big.addEventListener('click', () => {
+      // 随机颜色
+      document.body.style.background = `linear-gradient(135deg, ${colors[Math.floor(Math.random() * colors.length)]}, ${colors[Math.floor(Math.random() * colors.length)]})`;
+      // 随机文案
+      msg.textContent = tips[Math.floor(Math.random() * tips.length)];
+      // 彩蛋闪光
+      egg.classList.add('active');
+      setTimeout(() => egg.classList.remove('active'), 400);
+    });
+  </script>
+</body>
+</html>
