@@ -11349,6 +11349,10 @@ figure.highlight.foldable div.level-left {
 .gist .file {
   all: initial;
 }
+#toc {
+  max-height: calc(100vh - 22px);
+  overflow-y: scroll;
+}
 .widget .menu-list li ul {
   margin-right: 0;
 }
@@ -11641,6 +11645,10 @@ figure.highlight.foldable div.level-left {
   background-color: #276cda;
 }
 @media screen and (min-width: 1280px) {
+  .is-3-column .container {
+    max-width: 1216px;
+    width: 1216px;
+  }
   .is-1-column .container,
   .is-2-column .container {
     max-width: 1152px;
@@ -11648,6 +11656,10 @@ figure.highlight.foldable div.level-left {
   }
 }
 @media screen and (min-width: 1472px) {
+  .is-3-column .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
   .is-2-column .container {
     max-width: 1152px;
     width: 1152px;
