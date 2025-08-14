@@ -1,38 +1,49 @@
+/* 主题切换核心动画 —— 可直接覆盖原有文件 */
 :root {
-  /* 白天（Light） */
   --bg: #ffffff;
   --fg: #111111;
   --card: #ffffff;
   --border: #e5e5e5;
   --link: #3273dc;
-  --shadow: 0 2px 6px rgba(0,0,0,.06);
+  --shadow: 0 2px 6px rgba(0, 0, 0, .06);
   --radius: 8px;
   --font: 'Ubuntu', sans-serif;
+  --t-speed: .6s;
 }
 
 [data-theme="dark"] {
-  /* 黑夜（Dark / Cyberpunk） */
   --bg: #0d1117;
   --fg: #c9d1d9;
   --card: #161b22;
   --border: #30363d;
   --link: #58a6ff;
-  --shadow: 0 2px 12px rgba(0,255,255,.2);
+  --shadow: 0 2px 12px rgba(0, 255, 255, .2);
   --radius: 12px;
   --font: 'Oxanium', sans-serif;
 }
 
-/* 全局丝滑过渡 */
-html {
-  transition: background var(--t-speed, .6s) cubic-bezier(.4,0,.2,1),
-              color     var(--t-speed, .6s) cubic-bezier(.4,0,.2,1);
-}
+/* 只给会变化的主元素加过渡，避免性能抖动 */
+html,
 body,
 .navbar,
 .card,
-.section {
-  transition: background var(--t-speed, .6s) cubic-bezier(.4,0,.2,1),
-              color     var(--t-speed, .6s) cubic-bezier(.4,0,.2,1),
-              box-shadow var(--t-speed, .6s) cubic-bezier(.4,0,.2,1),
-              border-radius var(--t-speed, .6s) cubic-bezier(.4,0,.2,1);
+.section,
+.widget,
+.article,
+.article-meta,
+.content,
+.footer {
+  transition: background var(--t-speed) cubic-bezier(.4, 0, .2, 1),
+              color     var(--t-speed) cubic-bezier(.4, 0, .2, 1),
+              box-shadow var(--t-speed) cubic-bezier(.4, 0, .2, 1);
+}
+
+/* 加载时淡入 */
+body {
+  animation: fadeIn var(--t-speed) ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
