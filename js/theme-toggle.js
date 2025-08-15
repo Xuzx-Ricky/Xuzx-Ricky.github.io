@@ -14,8 +14,15 @@
   // 应用主题函数
   function applyTheme(t) {
     document.documentElement.setAttribute('data-theme', t);
+
+    // 主主题切换
     lightLink.disabled = t === 'dark';
-    darkLink.disabled = t === 'light';
+    darkLink.disabled  = t === 'light';
+
+    // highlight 主题切换
+    //document.getElementById('highlight-light').disabled = t === 'dark';
+    //document.getElementById('highlight-dark').disabled  = t === 'light';
+
     icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     localStorage.setItem(STORAGE_KEY, t);
   }
