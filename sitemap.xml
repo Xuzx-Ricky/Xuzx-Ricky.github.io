@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xuzx-ricky.github.io/about/index.html</loc>
+    
+    <lastmod>2025-08-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xuzx-ricky.github.io/2025/08/18/Hexo%20Icarus%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E5%8A%A0%E9%80%9F%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2025-08-22</lastmod>
@@ -55,15 +64,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://xuzx-ricky.github.io/about/index.html</loc>
-    
-    <lastmod>2025-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://xuzx-ricky.github.io/</loc>
@@ -72,13 +72,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://xuzx-ricky.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://xuzx-ricky.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
@@ -109,6 +102,13 @@
   </url>
   
   <url>
+    <loc>https://xuzx-ricky.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://xuzx-ricky.github.io/tags/%E7%BC%96%E7%A8%8B%E7%8C%AB/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -116,13 +116,6 @@
   </url>
   
 
-  
-  <url>
-    <loc>https://xuzx-ricky.github.io/categories/%E5%85%B6%E5%AE%83/</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://xuzx-ricky.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
@@ -133,6 +126,13 @@
   
   <url>
     <loc>https://xuzx-ricky.github.io/categories/%E5%AD%A6%E7%A7%91/</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzx-ricky.github.io/categories/%E5%85%B6%E5%AE%83/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
