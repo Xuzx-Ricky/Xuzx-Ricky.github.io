@@ -1,0 +1,1 @@
+(()=>{let a;document.addEventListener("DOMContentLoaded",()=>{try{var t=window.Pjax||function(){};a=new t({selectors:["[data-pjax]",".pjax-reload","head title",".columns",".navbar-start",".navbar-end",".searchbox link",".searchbox script","#back-to-top","#comments link","#comments script"],cacheBust:!1})}catch(t){console.warn("PJAX error: "+t)}})})();
